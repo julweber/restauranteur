@@ -8,12 +8,16 @@ var restauranteur = angular.module('restauranteur');
 //
 // }]);
 
-restauranteur.controller('RestaurantShowCtrl', ['$scope', '$location', '$http', '$routeParams', 'restaurantServiceTwo',
-function($scope, $location, $http, $routeParams, service) {
+restauranteur.controller('RestaurantShowCtrl', ['$scope', '$location', '$http', '$routeParams', '$window', 'restaurantServiceTwo',
+function($scope, $location, $http, $routeParams, $window, service) {
   $scope.restaurant = null;
 
   var handleFetchSuccess = function(data, status) {
     $scope.restaurant = data;
+  };
+
+  $scope.backToIndex = function() {
+    $window.location.href = '/#/restaurants'
   };
 
   service.getRestaurant($routeParams.id).success(handleFetchSuccess);

@@ -148,7 +148,6 @@ PLATFORMS
 
 DEPENDENCIES
   angular_rails_csrf
-  coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg

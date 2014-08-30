@@ -1,9 +1,9 @@
 var restauranteur = angular.module('restauranteur');
 
 restauranteur.factory('restaurantServiceTwo', [ '$http', '$q', function($http, $q) {
-    var restaurantServiceTwo = {};
+    var service = {};
 
-    restaurantServiceTwo.getRestaurants = function() {
+    service.getRestaurants = function() {
       var request = $http({
         method: "get",
         url: "./restaurants.json"
@@ -15,7 +15,7 @@ restauranteur.factory('restaurantServiceTwo', [ '$http', '$q', function($http, $
       // });
     }
 
-    restaurantServiceTwo.getRestaurant = function(id) {
+    service.getRestaurant = function(id) {
       var request = $http({
         method: "get",
         url: "./restaurants/" + id  + ".json"
@@ -25,7 +25,7 @@ restauranteur.factory('restaurantServiceTwo', [ '$http', '$q', function($http, $
     }
 
 
-    restaurantServiceTwo.addRestaurant = function(name) {
+    service.addRestaurant = function(name) {
       var request = $http({
         method: "post",
         url: "./restaurants.json",
@@ -37,5 +37,13 @@ restauranteur.factory('restaurantServiceTwo', [ '$http', '$q', function($http, $
       //return( request.then(restaurantServiceTwo.handleSuccess) );
     }
 
-    return restaurantServiceTwo;
+    service.deleteRestaurant = function(id) {
+      var request = $http({
+        method: "delete",
+        url: "./restaurants/" + id + ".json"
+      });
+      return request;
+    }
+
+    return service;
 }]);

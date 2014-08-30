@@ -1,8 +1,7 @@
 <!-- public/templates/restaurants/index.html -->
-
-<a href="/#">index</a>
+<h1>Restaurants</h2>
 <ul ng-repeat="restaurant in restaurants">
-  <li><a ng-click="viewRestaurant(restaurant.id)">{{ restaurant.name }}</a></li>
+  <li><a ng-click="viewRestaurant(restaurant.id)">{{ restaurant.name }}</a> <button ng-click="deleteRestaurant(restaurant.id)">Delete</button></li>
 </ul>
 
 <form novalidate class="simple-form">

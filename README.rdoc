@@ -6,3 +6,6 @@ http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
 http://www.bennadel.com/blog/2612-using-the-http-service-in-angularjs-to-make-ajax-requests.htm
 http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/
 http://stackoverflow.com/questions/16227644/angularjs-factory-http-service
+http://blog.hfarazm.com/angularjs-routing/
+http://stackoverflow.com/questions/21272903/how-do-i-make-the-back-button-work-when-navigating-back-to-an-angular-app
+https://docs.angularjs.org/api/ngResource/service/$resource
