@@ -1,0 +1,12 @@
+<!-- public/templates/restaurants/index.html -->
+
+<a href="/#">index</a>
+<ul ng-repeat="restaurant in restaurants">
+  <li><a ng-click="viewRestaurant(restaurant.id)">{{ restaurant.name }}</a></li>
+</ul>
+
+<form novalidate class="simple-form">
+  Restaurant name: <input type="text" ng-model="restaurant_name" /> </br>
+
+  <button ng-click="addRestaurant(restaurant_name)">Add</button>
+</form>
